@@ -1,0 +1,43 @@
+<html>
+<head>
+    <style>
+    .myButton {
+        box-shadow:inset -1px 9px 0px -21px #e67a73;
+        background-color:#e4685d;
+        border-radius:14px;
+        border:6px solid #ffffff;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:23px;
+        padding:29px 76px;
+        text-decoration:none;
+        text-shadow:-1px 0px 1px #b23e35;
+    }
+    .myButton:hover {
+        background-color:#eb675e;
+    }
+    .myButton:active {
+        position:relative;
+        top:1px;
+    }
+
+    </style>
+      
+</head>
+<body>
+ 
+<div style="margin: 0 auto; width: 200px; text-align: center;">
+{#    <a href="http://127.0.0.1:5000/condition/ON" class="myButton">开</a>#}
+    <a href="{{ url_for('condition', command='ON') }}" class="myButton">开</a>
+</div>
+
+<br>
+<div style="margin: 0 auto; width: 200px; text-align: center;">
+{#    <a href="http://127.0.0.1:5000/condition/OFF" class="myButton">关</a>#}
+    <a href="{{ url_for('condition', command='OFF') }}" class="myButton">关</a>
+</div>
+
+</body>
+</html>
